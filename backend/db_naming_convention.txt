@@ -1,0 +1,26 @@
+Database(JavaPortal)
+    Table(User)
+      Integer Type:
+        userId
+        status
+      Varchar type:
+        username
+        email
+        password
+      Timestamp:
+        createdAt
+        updatedAt
+
+    Table(Student):
+       Integer Type:
+          studentId
+          mobile
+       Varchar Type:
+          studentName
+          address
+ 
+    Table(Course)
+       Integer type:
+         courseId
+       Varchar type:
+         courseName
