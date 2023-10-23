@@ -66,7 +66,7 @@ For detailed information about the database schema, please refer to the [databas
 
 ## Testing
 
-- For information on testing the application, please refer to the Software Testing Documentation file.
+- For information on testing the application, please refer to the Software Testing Documentation file [Testing Report](SoftwareTestReport.md).
 
 ## Contributing
 - Contributions are welcome. Please follow these guidelines when contributing to the project:
