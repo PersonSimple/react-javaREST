@@ -1,0 +1,10 @@
+.customtoastsuccess {
+    background-color: rgb(248, 47, 47); /* Red background color */
+    color: white;
+    font-weight: bold;
+  }
+
+
+.customtoastsuccess .Toastify__progress-bar {
+  background: white;
+}
