@@ -258,7 +258,7 @@ const Createstudent = () => {
                               className="form-control"
                               required
                             />
-                            {showEmail && <small className="form-text text-danger">Number should be not more than 10 digits</small>}
+                            
                           </div>
                         </div>
 
