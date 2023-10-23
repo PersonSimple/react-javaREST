@@ -3,33 +3,36 @@
 - **Date**: October 23, 2023
 - **Version**: 1.0
 
-# Course api 
+# User api - 
 
-1. GET ALL COURSES - http://localhost:8080/course (GET)
+1.register user - http://localhost:8080/user/registration (POST)
 
-2. GET COURSE BY ID http://localhost:8080/course/{courseId} (GET)
-
-3. CREATE COURSE - http://localhost:8080/course
-
-      REQUEST BODY(CONTENT TYPE - APPLICATION/JSON)
-     {
-   
-          "courseName": "cse",
-          "courseDescription": "B.tech"
-      }
-
-
-5. UPDATE COURSE - http://localhost:8080/course/{courseId}
-
-         REQUEST BODY -
+        request body-
         {
-  
-          "courseName": "AI",
-          "courseDescription": "B.tech"
-    
+           "username": "st",
+            "password": "st"
         }
 
-5. DELETE COURSE http://localhost:8080/course/{courseId} (DELETE)
+
+2. LOGIN http://localhost:8080/user/login (POST)
+
+        EX: http://localhost:8080/user/login
+        {
+           "username": "st",
+            "password": "st"
+        }
 
 
-6. GET COURSE BY STATUS - http://localhost:8080/course/status/{status} (GET)
+3. ALL USER - http://localhost:8080/user/all (GET)
+
+4. DELETE USER - http://localhost:8080/user/{userId}. (DELETE)
+
+5. UPDATE USER PASSWORD - http://localhost:8080/user/{userId}/updatepassword (PUT)
+
+EX - "1234"  (type - string,  in the request body)
+
+6. UPDATE STATUS - http://localhost:8080/user/{userId}/updatestatus/{newStatus} (PUT)
+
+7. FIND USER BY STATUS - http://localhost:8080/user/find/status/{status} (GET)
+
+8. FIND USER BY ID -  http://localhost:8080/user/{usedId} (GET)
