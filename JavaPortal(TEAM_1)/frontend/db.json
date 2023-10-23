@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "ID": "1",
+      "Name": "Shivam",
+      "Email": "shivam@gmail.com",
+      "Password": "Qwerty1234",
+      "Action": "",
+      "status": true
+    },
+    {
+      "ID": "2",
+      "Name": "Aniket nigam",
+      "Email": "aniket@gamil.com",
+      "Password": "Qwerty1234",
+      "Action": "",
+      "status": true
+    },
+    {
+      "ID": "3",
+      "Name": "Mohmmad ZaID",
+      "Email": "mohmmadzaID759@gmail.com",
+      "Password": "Qwerty1234",
+      "Action": "",
+      "status": true
+    }
+  ],
+  "student": [
+    {
+      "studentName": "Mohammad Zaid",
+      "mobileNumber": "09876543210",
+      "email": "mohmmadzaid759@gmail.com",
+      "dateOfBirth": "1998-02-20",
+      "city": "Lucknow",
+      "address": "500/15 Qutubpur,Daliganj",
+      "CourseId": "105",
+      "id": 2
+    },
+    {
+      "studentName": "Boris Johnson",
+      "mobileNumber": 5551237890,
+      "email": "bob@example.com",
+      "dateOfBirth": "2001-06-15",
+      "city": "Othercity",
+      "address": "789 Oak Avenue",
+      "CourseId": "105",
+      "id": 3
+    }
+  ],
+  "course": [
+    {
+      "courseName": "Introduction to Computer Science",
+      "courseId": "105",
+      "courseDetail": "This course provides an introduction to the fundamentals of computer science.",
+      "id": 1,
+      "status": true
+    },
+    {
+      "studentName": "Mohammad Zaid",
+      "mobileNumber": "09876543210",
+      "email": "mohmmadzaid759@gmail.com",
+      "dateOfBirth": "1998-02-16",
+      "city": "Lucknow",
+      "address": "Lucknow",
+      "CourseId": "3010",
+      "id": 2
+    },
+    {
+      "studentName": "Boris Mehta",
+      "mobileNumber": "5551237890",
+      "email": "bobs@example.com",
+      "dateOfBirth": "2002-06-15",
+      "city": "Othercity",
+      "address": "789 Oak Avenue",
+      "CourseId": "3010",
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+.dashboard-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dashboard-flex-item {
+    flex: 0 1 calc(33.33% - 20px); /* Three items in a row */
+    text-align: center;
+    padding: 20px;
+}
+
+.dashboard-round-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    /* Replace with your image URL */
+    background-size: cover;
+}
+
+.dashboard-h2, .dashboard-h3 {
+    margin: 10px 0;
+}
+
+.dashboard-center-items {
+    display: flex;
+    justify-content: center;
+}
+.our-team-heading{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.dashboard-footer {
+    background-color: #000; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Center-align the text */
+    padding: 20px 0; /* Add some padding for spacing */
+    width: 100%;
+}
+#aniket{
+    background-image: url('../image/Aniket.jpg');
+}
+#shivam{
+    background-image: url('../image/shivam.jpg');
+}
+#rahil{
+    background-image: url('../image/Rahil.jpg');
+}
+
+#prateek{
+    background-image: url('../image/Prateek-modified.png');
+}
+#ashwariya{
+    background-image: url('../image/aishwariya-modified.png');
+}
+#aryan{
+    background-image: url('../image/Aryan.jpg');
+}
+#amisha{
+    background-image: url('../image/ameesha.jpg');
+}
+#zaid{
+    background-image: url('../image/zaid.jpg');
+}
