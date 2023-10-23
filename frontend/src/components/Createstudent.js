@@ -258,7 +258,7 @@ const Createstudent = () => {
                               className="form-control"
                               required
                             />
-                            
+
                           </div>
                         </div>
 

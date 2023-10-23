@@ -9,14 +9,9 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const [cpassword, setCpassword] = useState('');
 
-  const handleNameChange = (e) => {
-    const newName = e.target.value;
-    // Validate the user name: should only contain alphabets and be <= 15 characters
-    if (/^[A-Za-z]{1,15}$/.test(newName)) {
-      setName(newName);
-    }
+  const handleName = (e) => {
+    setName(e.target.value);
   }
-
   const handlePassword = (e) => {
     const newPassword = e.target.value;
     // Validate the password: should be <= 8 characters
@@ -65,7 +60,7 @@ const Signup = () => {
     }
   };
 
-  return(
+  return (
     <div>
       <section className="" style={{ backgroundColor: "#eee" }}>
         <div className="container h-100">
@@ -87,11 +82,12 @@ const Signup = () => {
                             </label>
                             <input
 
-                              type="text"
+                              type="email"
                               id="name"
-                              onChange={handleNameChange}
                               value={name}
+                              onChange={handleName}
                               className="form-control"
+                              required
                             />
 
                           </div>
@@ -109,6 +105,7 @@ const Signup = () => {
                               onChange={handlePassword}
                               value={password}
                               className="form-control"
+                              required
                             />
 
                           </div>
@@ -125,6 +122,7 @@ const Signup = () => {
                               onChange={handleCpassword}
                               className="form-control"
                               value={cpassword}
+                              required
                             />
 
                           </div>
