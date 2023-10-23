@@ -1,13 +1,13 @@
-
+import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Navbar from './Navbar';
-import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
 function UserDetail() {
     const [users, setUsers] = useState([]);
+    const [searchQuery, setSearchQuery] = useState('');
     const [showPasswordModal, setShowPasswordModal] = useState(false);
     const [selectedUserId, setSelectedUserId] = useState('');
     const [newPassword, setNewPassword] = useState('');
@@ -53,7 +53,7 @@ function UserDetail() {
     };
 
     const handleUpdatePassword = () => {
-        axios.put("http://localhost:8080/user/" + selectedUserId + "/updatepassword", newPassword, {
+        axios.put(`http://localhost:8080/user/${selectedUserId}/updatepassword`, newPassword, {
             headers: {
                 'Content-Type': 'text/plain',
             },
@@ -72,36 +72,54 @@ function UserDetail() {
             });
     };
 
+    const handleSearchChange = (event) => {
+        setSearchQuery(event.target.value);
+    };
+
+    const filteredUsers = users.filter((user) => {
+        const query = searchQuery.toLowerCase();
+        return user.username.toLowerCase().includes(query);
+    });
+
     return (
         <div>
             <Navbar />
             <div className="container card m-3 mx-auto p-5 rounded mt-5 w-75 bg-body-subtle">
-            <h2 className="read-student-heading">User List</h2>
-            <table className="table">
-                <thead className='about'>
-                    <tr>
-                        <th>User ID</th>
-                        <th>Username</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {users.map((user) => (
-                        <tr key={user.userId}>
-                            <td >{user.userId}</td>
-                            <td >{user.username}</td>
-                            <td>
-                                <button className='btn btn-warning'title='Delete User' onClick={() => handleDeleteUser(user.userId)}>
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                                <button className="btn btn-info"title='Change Password' onClick={() => handleShowPasswordModal(user.userId)}>
-                                <i class="fa-solid fa-lock"></i>
-                                </button>
-                            </td>
+                <h2 className="read-student-heading">User List</h2>
+                <div className="search-bar" style={{ margin: "25px" }}>
+                    <input
+                        type="text"
+                        placeholder="Search username"
+                        value={searchQuery}
+                        onChange={handleSearchChange}
+                        className="form-control"
+                    />
+                </div>
+                <table className="table">
+                    <thead className="about">
+                        <tr>
+                            <th>User ID</th>
+                            <th>Username</th>
+                            <th>Actions</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {filteredUsers.map((user) => (
+                            <tr key={user.userId}>
+                                <td>{user.userId}</td>
+                                <td>{user.username}</td>
+                                <td>
+                                    <button className="btn btn-warning" title="Delete User" onClick={() => handleDeleteUser(user.userId)}>
+                                        <i className="fa-solid fa-trash"></i>
+                                    </button>
+                                    <button className="btn btn-info" title="Change Password" onClick={() => handleShowPasswordModal(user.userId)}>
+                                        <i className="fa-solid fa-lock"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
 
             <Modal show={showPasswordModal} onHide={handleClosePasswordModal} backdrop="static" keyboard={false}>

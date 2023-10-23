@@ -7,7 +7,8 @@ Welcome to the Java Portal project, a web application for managing user accounts
 - [Overview](#overview)
 - [Technology Stack](#technology-stack)
 - [Installation](#installation)
-- [Database Schema](#database-schema)
+- [API Documentation](#api-documentation)
+- [Database Schema](#database-documentation)
 - [Testing](#testing)
 - [Contributing](#contributing)
 
@@ -60,6 +61,11 @@ The Java Portal is a web application developed using Java Spring Boot for the ba
 
 By following these installation steps, you'll have both the frontend and backend of the Java Portal project set up and ready to use.
 
+## API Documentation
+
+* [user api](userapi.md)
+* [student api](studentapi.md)
+* [course api](courseapi.md)
 
 ## Database Documentation
 For detailed information about the database schema, please refer to the [database documentation](SchemaDocumentation.md)

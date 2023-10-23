@@ -34,6 +34,10 @@ const Profile = () => {
                                             <h6 className="m-b-20 p-b-5 b-b-default f-w-600">Student Panel</h6>
                                             <div className="row">
                                                 <div className="col-sm-6">
+                                                    <p className="m-b-10 f-w-600">Id</p>
+                                                    <h6 className="text-muted f-w-400">{studentId}</h6>
+                                                </div>
+                                                <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Email</p>
                                                     <h6 className="text-muted f-w-400">{email}</h6>
                                                 </div>
@@ -44,10 +48,7 @@ const Profile = () => {
                                             </div>
                                             <h6 className="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">{course}</h6>
                                             <div className="row">
-                                                <div className="col-sm-6">
-                                                    <p className="m-b-10 f-w-600">Age</p>
-                                                    <h6 className="text-muted f-w-400">{age}</h6>
-                                                </div>
+
                                                 <div className="col-sm-6">
                                                     <p className="m-b-10 f-w-600">Address</p>
                                                     <h6 className="text-muted f-w-400">{address}</h6>
@@ -62,8 +63,12 @@ const Profile = () => {
                                                     <p className="m-b-10 f-w-600">State</p>
                                                     <h6 className="text-muted f-w-400">{state}</h6>
                                                 </div>
+                                                <div className="col-sm-6">
+                                                    <p className="m-b-10 f-w-600">Date Of Birth</p>
+                                                    <h6 className="text-muted f-w-400">{dateOfBirth}</h6>
+                                                </div>
                                             </div>
-                                      
+
                                             <ul className="social-link list-unstyled m-t-40 m-b-10">
                                                 <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="facebook" data-abc="true"><i className="mdi mdi-facebook feather icon-facebook facebook" aria-hidden="true"></i></a></li>
                                                 <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="twitter" data-abc="true"><i className="mdi mdi-twitter feather icon-twitter twitter" aria-hidden="true"></i></a></li>
@@ -80,7 +85,7 @@ const Profile = () => {
 
 
         </div>
-      
+
     )
 }
 
